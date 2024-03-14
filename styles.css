@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header, footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.sequins-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+}
+
+.sequin {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.sequin input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.sequin .sequin-content {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to top right, #ffcc00, #ff6600);
+    border-radius: 50%;
+    transition: transform 1.5s ease, background 1.5s ease;
+}
+
+.sequin input:checked + .sequin-content {
+    transform: rotateY(180deg);
+    background: linear-gradient(to top right, #6600ff, #3300cc);
+}
+
+footer p {
+    font-size: 14px;
+    color: #888;
+}
